@@ -13,7 +13,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "apollo": "^2.34.0",
-    "graphql": "^16.5.0",
+    "graphql": "15.5.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
@@ -24,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "fetch-schema": "npx apollo schema:download --endpoint=https://fullstack-engineer-test-n4ouilzfna-uc.a.run.app/graphql graphql-schema.json",
+    "apollo-codegen": "npx apollo codegen:generate --localSchemaFile=graphql-schema.json --target=typescript --tagName=gql"
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +45,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "resolutions": {
+    "graphql": "15.5.3",
+    "**/graphql": "15.5.3"
   }
 }
