@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className="App">
-      <PageView page={data.book.pages[1]}></PageView>
+      <PageView page={data.book.pages[10]}></PageView>
     </div>
   );
 }

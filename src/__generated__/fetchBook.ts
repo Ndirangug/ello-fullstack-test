@@ -9,7 +9,7 @@
 
 export interface fetchBook_book_pages_tokens {
   __typename: "Token";
-  position: (number | null)[];
+  position: (number)[];
   value: string;
 }
 
