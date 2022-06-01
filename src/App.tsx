@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { useQuery, gql } from "@apollo/client";
@@ -24,13 +24,41 @@ const FETCH_BOOK = gql`
 
 function App() {
   const { loading, error, data } = useQuery(FETCH_BOOK);
+  const [page, setPage] = useState(0);
+  const leftPage = page + 1;
+  const rightPage = page + 2;
+
+  const goToPrev = () => {
+    if (page > 0) {
+      setPage(page - 2);
+    }
+  };
+
+  const goToNext = () => {
+    if (page + 2 < data.book.pages.length) {
+      setPage(page + 2);
+    }
+  };
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error.message}</p>;
 
   return (
     <div className="App">
-      <PageView page={data.book.pages[10]}></PageView>
+      <div className="pages">
+        <PageView page={data.book.pages[page]}></PageView>
+        <PageView page={data.book.pages[page + 1]}></PageView>
+      </div>
+
+      <div className="page-markers">
+        <p>Page {leftPage}</p>
+        <p>Page {rightPage}</p>
+      </div>
+
+      <div className="navigation">
+        <button onClick={goToNext}>NEXT</button>
+        <button onClick={goToPrev}>PREV</button>
+      </div>
     </div>
   );
 }
