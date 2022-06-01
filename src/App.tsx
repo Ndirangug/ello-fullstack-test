@@ -4,6 +4,7 @@ import "./App.css";
 import { useQuery, gql } from "@apollo/client";
 import Page from "./components/PageView";
 import PageView from "./components/PageView";
+import TokenValue from "./components/TokenValue.tsx";
 
 const FETCH_BOOK = gql`
   query fetchBook {
@@ -45,19 +46,27 @@ function App() {
 
   return (
     <div className="App">
-      <div className="pages">
-        <PageView page={data.book.pages[page]}></PageView>
-        <PageView page={data.book.pages[page + 1]}></PageView>
+      <TokenValue />
+      <div id="pages">
+        <PageView
+          className="leftPage"
+          pageNumber={leftPage}
+          page={data.book.pages[page]}
+        ></PageView>
+        <PageView
+          className="rightPage"
+          pageNumber={rightPage}
+          page={data.book.pages[page + 1]}
+        ></PageView>
       </div>
 
-      <div className="page-markers">
-        <p>Page {leftPage}</p>
-        <p>Page {rightPage}</p>
-      </div>
-
-      <div className="navigation">
-        <button onClick={goToNext}>NEXT</button>
-        <button onClick={goToPrev}>PREV</button>
+      <div id="navigation">
+        <button className="btn" onClick={goToPrev}>
+          PREV
+        </button>
+        <button className="btn" onClick={goToNext}>
+          NEXT
+        </button>
       </div>
     </div>
   );

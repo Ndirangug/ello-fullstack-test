@@ -1,7 +1,16 @@
 import { fetchBook_book_pages } from "../../__generated__/fetchBook";
 import ClickableText from "../ClickableText";
+import "./index.css";
 
-function PageView({ page }: { page: fetchBook_book_pages }) {
+function PageView({
+  page,
+  pageNumber,
+  className,
+}: {
+  page: fetchBook_book_pages;
+  pageNumber: number;
+  className: string;
+}) {
   let toRender = []; //holds the text to be rendered that is already associated with tokens
 
   for (let i = 0; i < page.tokens!.length; i++) {
@@ -30,13 +39,13 @@ function PageView({ page }: { page: fetchBook_book_pages }) {
 
     toRender.push(ClickableText(extratcedText, currentToken)); //push the text to be rendered to the array
     toRender.push(extractedPunctuation); //push the punctuation to be rendered to the array
-    
   }
 
   return (
-    <div>
-      <p>{page.content}</p>
-      <p>{toRender}</p>
+    <div className={className} id="page">
+      {/* <p>{page.content}</p> */}
+      <p className="content">{toRender}</p>
+      <div className="pageNumber">Page {pageNumber}</div>
     </div>
   );
 }
