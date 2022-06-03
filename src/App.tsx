@@ -4,7 +4,6 @@ import "./App.css";
 import { useQuery, gql } from "@apollo/client";
 import Page from "./components/PageView";
 import PageView from "./components/PageView";
-import TokenValue from "./components/TokenValue.tsx";
 
 const FETCH_BOOK = gql`
   query fetchBook {
@@ -46,7 +45,8 @@ function App() {
 
   return (
     <div className="App">
-      <TokenValue />
+      <div id="token"></div>
+
       <div id="pages">
         <PageView
           className="leftPage"
@@ -69,6 +69,7 @@ function App() {
         </button>
       </div>
     </div>
+    // </TokenContext.Provider>
   );
 }
 

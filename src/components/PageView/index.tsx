@@ -45,6 +45,7 @@ function PageView({
     <div className={className} id="page">
       {/* <p>{page.content}</p> */}
       <p className="content">{toRender}</p>
+      <div className="spacer"></div>
       <div className="pageNumber">Page {pageNumber}</div>
     </div>
   );
