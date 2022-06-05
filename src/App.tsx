@@ -46,6 +46,9 @@ function App() {
   return (
     <div className="App">
       <div id="token"></div>
+      <div id="rotatePage">
+        Please rotate screen or view on a larger device for a better view
+      </div>
       <div className="book-info">
         <h1 className="book-title">{data.book.title}</h1>
         <p className="author">{data.book.author}</p>

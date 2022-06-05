@@ -99,3 +99,24 @@
   );
   border-left: rgba(0, 0, 0, 0.808) 0.1em solid;
 }
+
+#rotatePage {
+  background: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  width: 100vw;
+  padding: 0.5em;
+  display: none;
+  z-index: 3;
+}
+
+@media only screen and (max-width: 500px) {
+  #rotatePage {
+    display: block;
+  }
+}
