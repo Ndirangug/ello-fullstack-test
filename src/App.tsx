@@ -61,11 +61,11 @@ function App() {
       </div>
 
       <div id="navigation">
-        <button className="btn" onClick={goToPrev}>
-          PREV
+        <button className="btn btn-prev" onClick={goToPrev}>
+          &lt;
         </button>
-        <button className="btn" onClick={goToNext}>
-          NEXT
+        <button className="btn btn-next" onClick={goToNext}>
+          &gt;
         </button>
       </div>
     </div>
