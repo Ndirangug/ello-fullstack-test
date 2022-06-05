@@ -46,7 +46,10 @@ function App() {
   return (
     <div className="App">
       <div id="token"></div>
-
+      <div className="book-info">
+        <h1 className="book-title">{data.book.title}</h1>
+        <p className="author">{data.book.author}</p>
+      </div>
       <div id="pages">
         <PageView
           className="leftPage"

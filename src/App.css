@@ -2,6 +2,15 @@
   position: relative;
 }
 
+.book-info {
+  text-align: center;
+}
+
+.book-info .author {
+  font-style: italic;
+  margin-top: -0.8em;
+}
+
 #pages {
   display: grid;
   grid-template-columns: repeat(2, 50%);
