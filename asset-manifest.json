@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ello-fullstack-test/static/css/main.5c38138f.css",
-    "main.js": "/ello-fullstack-test/static/js/main.01e71d42.js",
+    "main.css": "/ello-fullstack-test/static/css/main.d91a9ff3.css",
+    "main.js": "/ello-fullstack-test/static/js/main.0777612f.js",
     "static/js/787.b111bd74.chunk.js": "/ello-fullstack-test/static/js/787.b111bd74.chunk.js",
     "index.html": "/ello-fullstack-test/index.html",
     "static/media/close.svg": "/ello-fullstack-test/static/media/close.196805044472bbfafa61cc93d33f5847.svg",
-    "main.5c38138f.css.map": "/ello-fullstack-test/static/css/main.5c38138f.css.map",
-    "main.01e71d42.js.map": "/ello-fullstack-test/static/js/main.01e71d42.js.map",
+    "main.d91a9ff3.css.map": "/ello-fullstack-test/static/css/main.d91a9ff3.css.map",
+    "main.0777612f.js.map": "/ello-fullstack-test/static/js/main.0777612f.js.map",
     "787.b111bd74.chunk.js.map": "/ello-fullstack-test/static/js/787.b111bd74.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c38138f.css",
-    "static/js/main.01e71d42.js"
+    "static/css/main.d91a9ff3.css",
+    "static/js/main.0777612f.js"
   ]
 }
